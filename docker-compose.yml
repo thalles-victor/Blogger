@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  user-database: 
+    image: postgres:latest
+    restart: always
+    environment: 
+      POSTGRES_DB: userdatabase
+      POSTGRES_USER: postgres_userdb
+      POSTGRES_PASSWORD: mustbestrongapassword
+    ports:
+      - 5432:5432
